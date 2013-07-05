@@ -6,18 +6,52 @@
 	<version>0.0.1-SNAPSHOT</version>
 	
 	<repositories>
+		<repository>
+			<id>nexus</id>
+			<url>http://172.20.0.16:8081/nexus/content/groups/public/</url>
+		</repository>
 	</repositories>
 	<dependencies>
+	<!-- bean validation JSR 303 -->
 		<dependency>
 			<groupId>javax.validation</groupId>
 			<artifactId>validation-api</artifactId>
 			<version>1.0.0.GA</version>
 		</dependency>
-		<!--  -->
+		<!--  bean validation hibernate implementation -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-validator</artifactId>
 			<version>4.3.0.Final</version>
 		</dependency>
+		
+		
+		<!-- Hibernate core -->
+		 <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>4.1.9.Final</version>
+        </dependency>
+
+        <!-- Hibernate uses slf4j for logging, for our purposes here use the simple backend -->
+        <dependency>
+  <groupId>org.slf4j</groupId>
+  <artifactId>slf4j-simple</artifactId>
+  <version>1.6.4</version>
+</dependency>
+		<!-- hibernate need -->
+        <dependency>
+            <groupId>javassist</groupId>
+            <artifactId>javassist</artifactId>
+            <version>3.8.0.GA</version>
+        </dependency>
+        <!-- Because this is a web app, we also have a dependency on the servlet api. -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>2.5</version>
+        </dependency>
+
+		
 	</dependencies>
 </project>
