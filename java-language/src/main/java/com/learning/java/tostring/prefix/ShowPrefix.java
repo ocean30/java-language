@@ -13,6 +13,7 @@ public class ShowPrefix {
 	 */
 	public static void main(String[] args) {
 		System.out.println(String.class.getName());
+		System.out.println(int.class.getName());
 		System.out.println(byte.class.getName());
 		System.out.println(long.class.getName());
 		System.out.println(void.class.getName());

@@ -3,12 +3,12 @@ import java.util.Date;
 
 import javax.jws.WebMethod;
 import javax.jws.WebService;
-import javax.jws.soap.SOAPBinding;
 import javax.xml.ws.Endpoint;
 
-@WebService(targetNamespace = "http://www.ocean.com")
-@SOAPBinding(style = SOAPBinding.Style.RPC)
-public class JavaAppWebService {
+@WebService(endpointInterface="com.learning.java.webservice.IWebService",
+targetNamespace = "http://www.ocean.com")
+//@SOAPBinding(style = SOAPBinding.Style.RPC)
+public class JavaAppWebService implements IWebService{
 
     @WebMethod
     public String getServerTime()
@@ -24,7 +24,12 @@ public class JavaAppWebService {
         //访问：
         //http://localhost:8088/JavaAppWebService
         //http://localhost:8088/JavaAppWebService?wsdl
+    	//java 发布
         Endpoint.publish("http://localhost:8088/JavaAppWebService", new JavaAppWebService());
+    	//spring 发布
+//    	SimpleJaxWsServiceExporter sjwse = new SimpleJaxWsServiceExporter();
+//    	sjwse.setBaseAddress("http://localhost:8088/");
+//    	sjwse.publishEndpoints();
     }
 
 }

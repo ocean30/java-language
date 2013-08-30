@@ -9,7 +9,7 @@ import java.util.Properties;
 
 import org.apache.log4j.Logger;
 
-import com.learning.util.StdOutErrLog;
+import com.learning.util.log.StdOutErrLog;
 
 /**
  * test jdbc load

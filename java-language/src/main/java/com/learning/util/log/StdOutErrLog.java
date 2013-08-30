@@ -1,4 +1,4 @@
-package com.learning.util;
+package com.learning.util.log;
 
 import java.io.PrintStream;
 
