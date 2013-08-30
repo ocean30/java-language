@@ -13,4 +13,10 @@ public class QuoteObserver implements Observer<Quote> {
 		System.out.println(this +" : " + interest.toString());
 	}
 
+	@Override
+	public String getName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
